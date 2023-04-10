@@ -1,9 +1,6 @@
-FROM openjdk:11
-MAINTAINER Jefster Farlei <jefsterfarlei@gmail.com>
+FROM adoptopenjdk:17-jre-hotspot
+WORKDIR /app
 
-RUN mkdir /usr/app
+COPY target/java-exercise-1.0.0-SNAPSHOT.jar .
 
-WORKDIR /java-exercise
-COPY target/java-exercise-1.0.0.jar .
-
-ENTRYPOINT ["java","-jar","java-exercise-1.0.0.jar"]
+CMD ["java", "-jar", "java-exercise-1.0.0-SNAPSHOT.jar"]

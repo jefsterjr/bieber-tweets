@@ -1,15 +1,7 @@
-package org.interview.config.oauth;
+package org.interview.exception;
 
 public class TwitterAuthenticationException extends Exception {
 
-	public TwitterAuthenticationException() {
-		super();
-	}
-	
-	public TwitterAuthenticationException(final String message) {
-		super(message);
-	}
-	
 	public TwitterAuthenticationException(final String message, final Throwable t) {
 		super(message, t);
 	}
